@@ -1,0 +1,32 @@
+# Copy to config.toml (it's in .gitignore) and fill in.
+# Precedence: CLI arguments > environment variables > config.toml.
+
+# Where to get what's playing. Its options go in the [<provider>] table below.
+provider = "spotify"
+
+# Pixoo Max MAC address. Leave commented out to look for 'Pixoo' in `bluetoothctl devices`.
+# addr = "XX:XX:XX:XX:XX:XX"
+
+# RFCOMM channel. If it won't connect, try 2.
+channel = 1
+
+# Brightness 0–100. Leave commented out to keep the current brightness.
+# brightness = 60
+
+# Cover saturation in %: the LED matrix washes colors out.
+saturate = 120
+
+# What to do when nothing is playing: "keep" leaves the cover, "black" blanks the display.
+on_idle = "keep"
+
+# Backoff ceiling on provider errors, seconds.
+poll_max_backoff = 300.0
+
+[spotify]
+# Client ID of your app at https://developer.spotify.com/dashboard
+# (Redirect URI: http://127.0.0.1:8888/callback). Or set SPOTIFY_CLIENT_ID.
+client_id = "your-spotify-client-id"
+
+# Polling intervals, seconds.
+poll_playing = 5.0  # while playing
+poll_idle = 15.0    # paused / nothing playing
