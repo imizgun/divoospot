@@ -80,3 +80,9 @@ Then register it in `PROVIDERS` in `providers/__init__.py` and set `provider = "
 - `start(relogin)` is an optional one-time setup hook (auth, finding the player).
 - Raise `RetryLater(seconds)` to wait without error backoff (e.g. rate limits); any other exception is logged and retried with backoff.
 - Log via `self.log`; lines are prefixed with the provider name.
+
+# Thanks to
+[Jakob Westhoff](https://github.com/jakobwesthoff/divoom-pixoo-max-nodejs)
+
+# AI usage
+Heavy AI usage
